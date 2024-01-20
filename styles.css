@@ -1,0 +1,90 @@
+body {
+    display: grid;
+    align-content: center;
+    margin: 0% 6% 0% 6%;
+    background-image: url(img/back.gif);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    margin-top: -60px;
+}
+html{
+    height: 110%;
+}
+
+div>h1 {
+    display: grid;
+    background-color: rgba(247, 244, 244, 0.8);
+    font-size: 50px;
+    height: 100px;
+    width: 600px;
+    align-content: center;
+    justify-content: center;
+    font-family: Lucida Handwriting;
+    margin: 10% 0% 5% 0%;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.board>.cell{
+    display: grid;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    border-radius: 15px;
+    border: solid 2px black;
+    background-color: rgba(255, 255, 255, 0.8);
+    align-content: center;
+}
+
+.board>.cell:hover {
+    background-color: rgba(122, 122, 122, 0.589);
+    color: rgb(0, 0, 0);
+}
+
+.turn {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 25px;
+    background-color: rgba(247, 244, 244, 0.8);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.score {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(247, 244, 244, 0.8);
+}
+.restart-button{
+    width: 100px;
+    height: 40px;
+  }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+            
+    <title>Jogo da Velha</title>
+</head>
+<body onload="playBackgroundMusic()">
+    <div class="container">
+        <div class="logo">
+            <h1>Jogo da Velha</h1>
+        </div>
+        <div id="turn" class="turn">Vez do Jogador X</div><br>
+        <div id="score" class="score">Placar: Jogador X - 0 | Jogador O - 0</div><br>
+        <div id="board" class="board">
+            <button class="cell" onclick="makeMove(0)"></button>
+            <button class="cell" onclick="makeMove(1)"></button>
+            <button class="cell" onclick="makeMove(2)"></button>
+            <button class="cell" onclick="makeMove(3)"></button>
+            <button class="cell" onclick="makeMove(4)"></button>
+            <button class="cell" onclick="makeMove(5)"></button>
+            <button class="cell" onclick="makeMove(6)"></button>
+            <button class="cell" onclick="makeMove(7)"></button>
+            <button class="cell" onclick="makeMove(8)"></button>
+        </div>
+        <div id="result" class="result"></div><br>
+   
+
+        <button onclick="restartGame()" class="restart-button">Reiniciar Jogo</button>
+
+      
+        <audio id="backgroundMusic" loop>
+            <source src="/music/musica-chinesa.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
