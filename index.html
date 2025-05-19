@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-            
     <title>Jogo da Velha</title>
 </head>
 <body onload="playBackgroundMusic()">
@@ -12,25 +11,28 @@
         <div class="logo">
             <h1>Jogo da Velha</h1>
         </div>
-        <div id="turn" class="turn">Vez do Jogador X</div><br>
-        <div id="score" class="score">Placar: Jogador X - 0 | Jogador O - 0</div><br>
-        <div id="board" class="board">
-            <button class="cell" onclick="makeMove(0)"></button>
-            <button class="cell" onclick="makeMove(1)"></button>
-            <button class="cell" onclick="makeMove(2)"></button>
-            <button class="cell" onclick="makeMove(3)"></button>
-            <button class="cell" onclick="makeMove(4)"></button>
-            <button class="cell" onclick="makeMove(5)"></button>
-            <button class="cell" onclick="makeMove(6)"></button>
-            <button class="cell" onclick="makeMove(7)"></button>
-            <button class="cell" onclick="makeMove(8)"></button>
+        <div id="score" class="score">
+            Placar: Jogador X - 0 | Jogador O - 0
+            <button id="sound-toggle" class="sound-toggle" onclick="toggleSound()" aria-label="Alternar som" title="Alternar som">
+                🔊
+            </button>
         </div>
-        <div id="result" class="result"></div><br>
-   
-
-        <button onclick="restartGame()" class="restart-button">Reiniciar Jogo</button>
-
-      
+        <div id="turn" class="turn">Vez do Jogador X</div>
+        <div id="board" class="board">
+            <button class="cell" onclick="makeMove(0)" aria-label="Célula 1" tabindex="0"></button>
+            <button class="cell" onclick="makeMove(1)" aria-label="Célula 2" tabindex="0"></button>
+            <button class="cell" onclick="makeMove(2)" aria-label="Célula 3" tabindex="0"></button>
+            <button class="cell" onclick="makeMove(3)" aria-label="Célula 4" tabindex="0"></button>
+            <button class="cell" onclick="makeMove(4)" aria-label="Célula 5" tabindex="0"></button>
+            <button class="cell" onclick="makeMove(5)" aria-label="Célula 6" tabindex="0"></button>
+            <button class="cell" onclick="makeMove(6)" aria-label="Célula 7" tabindex="0"></button>
+            <button class="cell" onclick="makeMove(7)" aria-label="Célula 8" tabindex="0"></button>
+            <button class="cell" onclick="makeMove(8)" aria-label="Célula 9" tabindex="0"></button>
+        </div>
+        <div class="bottom-area">
+            <div id="result" class="result"></div>
+            <button onclick="restartGame()" class="restart-button">Reiniciar Jogo</button>
+        </div>
         <audio id="backgroundMusic" loop>
             <source src="/music/musica-chinesa.mp3" type="audio/mp3">
         </audio>
