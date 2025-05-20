@@ -3,6 +3,9 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: 100vw;
+    min-width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
@@ -13,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(img/back.gif);
+    background-image: url(imagens/back.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,27 +27,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center; /* Centraliza verticalmente */
     width: 100vw;
     min-height: 100vh;
-    height: auto; /* Corrige o problema de sobreposição */
+    height: 100vh;
     padding: 0;
     position: relative;
     box-sizing: border-box;
 }
 
 .logo h1 {
-    font-family: 'Lucida Handwriting', cursive;
-    font-size: 2.2rem;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.3rem;
     margin: 18px 0 10px 0;
-    color: #fff;
-    text-shadow: 2px 2px 8px #d35400, 0 0 12px #000;
+    color: #ffe066;
+    text-shadow: 0 2px 8px #000, 0 0 18px #000;
     letter-spacing: 2px;
-    background: rgba(0,0,0,0.7);
-    border-radius: 12px;
-    padding: 8px 24px;
+    background: none;
+    border-radius: 0;
+    padding: 10px 24px;
     max-width: 95vw;
     box-sizing: border-box;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    transition: color 0.3s, text-shadow 0.3s;
+    word-break: break-word;
 }
 
 .turn {
@@ -87,9 +95,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5vw;
-    margin: 18px 0 0 0; /* Remove o margin-bottom para evitar espaço extra */
-    width: min(70vw, 70vh, 340px); /* Tamanho padrão menor */
-    height: min(70vw, 70vh, 340px);
+    margin: 18px 0 0 0;
+    width: min(80vw, 60vh, 340px);
+    height: min(80vw, 60vh, 340px);
     aspect-ratio: 1 / 1;
     background: none;
 }
@@ -140,8 +148,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 24px; /* Espaço entre o tabuleiro e o resultado/botão */
-    position: static; /* Remove o absolute para evitar sobreposição */
+    margin-top: 24px; 
+    position: static;
     padding-bottom: 0;
     z-index: 20;
     pointer-events: none;
@@ -170,6 +178,7 @@ body {
     transition: background 0.2s, color 0.2s;
     box-shadow: 0 2px 8px rgba(211,84,0,0.08);
     z-index: 10;
+    white-space: nowrap; /* Garante que o texto fique em uma linha */
 }
 
 .restart-button:hover {
@@ -182,19 +191,46 @@ audio {
 }
 
 /* Responsivo para telas pequenas */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .board {
-        width: min(92vw, 92vh, 260px);
-        height: min(92vw, 92vh, 260px);
+        max-width: 320px;
+        max-height: 320px;
+        width: min(90vw, 60vh, 320px);
+        height: min(90vw, 60vh, 320px);
+    }
+    .logo h1 {
+        font-size: 2rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    html, body {
+        height: 100%;
+        min-height: 100%;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .container {
+        max-width: 100vw;
+        min-height: 100vh;
+        height: 100vh;
+        justify-content: center;
+    }
+    .logo h1 {
+        font-size: 1.5rem;
+        padding: 6px 8px;
+    }
+    .board {
+        max-width: 260px;
+        max-height: 260px;
+        width: min(92vw, 60vh, 260px);
+        height: min(92vw, 60vh, 260px);
         gap: 2vw;
     }
     .board > .cell {
         font-size: 1.1rem;
         border-radius: 10px;
-    }
-    .logo h1 {
-        font-size: 1.1rem;
-        padding: 6px 8px;
     }
 }
 
@@ -209,20 +245,21 @@ audio {
         padding: 0;
         max-width: 100vw;
         min-height: 100vh;
-        height: auto;
+        height: 100vh;
+        justify-content: flex-start;
     }
     .logo h1 {
-        font-size: 0.95rem;
+        font-size: 3.3rem;
         padding: 4px 4px;
-        margin: 10px 0 6px 0;
+        margin: 4.4rem 0.5rem 0.5rem;
     }
     .score {
-        font-size: 0.9rem;
+        font-size: 1.0rem;
         padding: 4px 4px;
         margin-bottom: 2px;
     }
     .turn {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
         padding: 4px 4px;
         margin: 6px 0 0 0;
     }
@@ -232,27 +269,85 @@ audio {
         max-width: 94vw;
         max-height: 94vw;
         gap: 2vw;
-        margin: 10px 0 0 0;
+        margin: 1.0rem 0.5rem 0.5rem;
     }
     .board > .cell {
-        font-size: 0.85rem;
+        font-size: 2.5rem;
         border-radius: 6px;
         padding: 0;
     }
     .result {
-        font-size: 0.95rem;
-        padding: 4px 4px;
+        font-size: 2rem;
+        padding: 9px 4px;
         margin-bottom: 6px;
     }
     .restart-button {
-        width: 70px;
-        height: 26px;
-        font-size: 0.85rem;
+        width: 210px;
+        height: 40px;
+        font-size: 30px;
         margin-top: 2px;
     }
     .bottom-area {
         margin-top: 8px;
         padding-bottom: 0;
+    }
+} 
+
+/* Tablets em modo retrato (ex: 1024x1366) */
+@media (min-width: 601px) and (max-width: 1100px) and (orientation: portrait) {
+    .container {
+        justify-content: center;
+    }
+    .board {
+        width: min(94vw, 80vh, 420px);
+        height: min(94vw, 80vh, 420px);
+        max-width: 420px;
+        max-height: 420px;
+    }
+    .logo h1 {
+        font-size: 2.7rem;
+    }
+    .score,
+    .turn {
+        font-size: 1.7rem;
+        padding: 10px 20px;
+    }
+    .board > .cell {
+        font-size: 2.7rem;
+        border-radius: 18px;
+    }
+    .result {
+        font-size: 2.1rem;
+        padding: 12px 8px;
+    }
+    .restart-button {
+        width: 180px;
+        height: 54px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Tablets em modo paisagem */
+@media (min-width: 601px) and (max-width: 1100px) and (orientation: landscape) {
+    .board {
+        width: min(60vw, 60vh, 320px);
+        height: min(60vw, 60vh, 320px);
+        max-width: 320px;
+        max-height: 320px;
+    }
+    .logo h1 {
+        font-size: 1.7rem;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1201px) {
+    .board {
+        width: 400px;
+        height: 400px;
+    }
+    .board > .cell {
+        font-size: 2.2rem;
     }
 }
 
