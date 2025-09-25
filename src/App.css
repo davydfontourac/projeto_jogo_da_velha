@@ -4,9 +4,9 @@
 
 @layer components {
   .game-cell {
-    @apply w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 
+    @apply w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24
            bg-white/90 backdrop-blur-sm border-2 border-purple-300 
-           rounded-xl font-bold text-2xl md:text-3xl lg:text-4xl 
+           rounded-lg font-bold text-xl md:text-2xl lg:text-3xl 
            cursor-pointer transition-all duration-300 ease-out
            hover:scale-105 hover:shadow-lg hover:border-purple-400
            focus:outline-none focus:ring-4 focus:ring-purple-300/50
@@ -33,18 +33,18 @@
   
   .score-display {
     @apply bg-white/20 backdrop-blur-md border border-white/30 
-           rounded-2xl px-6 py-3 text-white font-semibold text-lg
+           rounded-xl px-3 py-2 text-white font-semibold text-sm
            shadow-lg;
   }
   
   .turn-indicator {
     @apply bg-gradient-to-r from-purple-500 to-pink-500 
-           text-white px-4 py-2 rounded-full font-bold text-sm
+           text-white px-3 py-1 rounded-full font-bold text-xs
            shadow-lg animate-fade-in;
   }
   
   .result-message {
-    @apply text-2xl font-bold text-center p-4 rounded-xl 
+    @apply text-lg font-bold text-center p-3 rounded-lg 
            bg-gradient-to-r from-yellow-400 to-orange-500 
            text-white shadow-lg animate-bounce-in;
   }
@@ -52,7 +52,7 @@
   .game-button {
     @apply bg-gradient-to-r from-purple-600 to-pink-600 
            hover:from-purple-700 hover:to-pink-700
-           text-white font-bold py-3 px-6 rounded-xl
+           text-white font-bold py-2 px-4 rounded-lg text-sm
            transition-all duration-300 ease-out
            hover:scale-105 hover:shadow-xl
            focus:outline-none focus:ring-4 focus:ring-purple-300/50
