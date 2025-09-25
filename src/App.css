@@ -9,8 +9,17 @@
            rounded-lg font-bold text-xl md:text-2xl lg:text-3xl 
            cursor-pointer transition-all duration-300 ease-out
            hover:scale-105 hover:shadow-lg hover:border-purple-400
-           focus:outline-none focus:ring-4 focus:ring-purple-300/50
-           flex items-center justify-center;
+           focus:outline-none focus:ring-4 focus:ring-purple-300/50;
+    
+    /* Centralização perfeita */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    vertical-align: middle !important;
   }
   
   .game-cell:disabled {
