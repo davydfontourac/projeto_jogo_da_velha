@@ -1,0 +1,61 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .game-cell {
+    @apply w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 
+           bg-white/90 backdrop-blur-sm border-2 border-purple-300 
+           rounded-xl font-bold text-2xl md:text-3xl lg:text-4xl 
+           cursor-pointer transition-all duration-300 ease-out
+           hover:scale-105 hover:shadow-lg hover:border-purple-400
+           focus:outline-none focus:ring-4 focus:ring-purple-300/50
+           flex items-center justify-center;
+  }
+  
+  .game-cell:disabled {
+    @apply cursor-not-allowed opacity-70;
+  }
+  
+  .game-cell.player-x {
+    @apply text-blue-600 bg-blue-50/80;
+  }
+  
+  .game-cell.player-o {
+    @apply text-red-600 bg-red-50/80;
+  }
+  
+  .game-cell.winning {
+    @apply bg-gradient-to-br from-green-400 to-green-600 
+           text-white animate-pulse-slow shadow-2xl
+           border-green-400;
+  }
+  
+  .score-display {
+    @apply bg-white/20 backdrop-blur-md border border-white/30 
+           rounded-2xl px-6 py-3 text-white font-semibold text-lg
+           shadow-lg;
+  }
+  
+  .turn-indicator {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 
+           text-white px-4 py-2 rounded-full font-bold text-sm
+           shadow-lg animate-fade-in;
+  }
+  
+  .result-message {
+    @apply text-2xl font-bold text-center p-4 rounded-xl 
+           bg-gradient-to-r from-yellow-400 to-orange-500 
+           text-white shadow-lg animate-bounce-in;
+  }
+  
+  .game-button {
+    @apply bg-gradient-to-r from-purple-600 to-pink-600 
+           hover:from-purple-700 hover:to-pink-700
+           text-white font-bold py-3 px-6 rounded-xl
+           transition-all duration-300 ease-out
+           hover:scale-105 hover:shadow-xl
+           focus:outline-none focus:ring-4 focus:ring-purple-300/50
+           active:scale-95;
+  }
+}

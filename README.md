@@ -1,36 +1,70 @@
-# Jogo da Velha
+# Getting Started with Create React App
 
-Um projeto de Jogo da Velha (Tic-Tac-Toe) responsivo, feito para web.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Funcionalidades
+## Available Scripts
 
-- **Jogo da Velha clássico** para dois jogadores (X e O).
-- **Placar automático**: contabiliza vitórias de cada jogador.
-- **Indicação de vez**: mostra de quem é a vez logo acima do tabuleiro.
-- **Destaque da linha vencedora**: realce visual para a linha vencedora.
-- **Mensagem de empate** quando não há vencedor.
-- **Botão de reiniciar**: reseta o tabuleiro mantendo o placar.
-- **Música de fundo**: com opção de ligar/desligar o som.
-- **Responsivo**: funciona bem em celulares, tablets e desktops.
-- **Acessibilidade**: botões com `aria-label` e navegação por teclado.
+In the project directory, you can run:
 
-## Tecnologias utilizadas
+### `npm start`
 
-- **HTML5**: estrutura da página.
-- **CSS3**: estilização, responsividade e efeitos visuais.
-- **JavaScript**: lógica do jogo, controle de placar, som e interatividade.
-- **Áudio**: reprodução de música de fundo em formato MP3.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Como usar
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-1. Abra o arquivo `index.html` em seu navegador.
-2. Clique nas células para jogar.
-3. Use o botão 🔊/🔇 para ligar ou desligar o som.
-4. Clique em "Reiniciar Jogo" para começar uma nova partida.
+### `npm test`
 
----
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-**Observação:**  
-O som pode não tocar automaticamente em alguns navegadores até que haja uma interação do usuário (clique ou toque na tela).
+### `npm run build`
 
----
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
