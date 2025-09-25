@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# 🎮 Jogo da Velha React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um jogo da velha moderno e interativo desenvolvido com React e Tailwind CSS, com efeitos sonoros e design responsivo.
 
-## Available Scripts
+## ✨ Características
 
-In the project directory, you can run:
+- 🎨 **Interface moderna** com design glassmorphism
+- 🔊 **Efeitos sonoros** para jogadas e vitórias
+- 📱 **Design responsivo** que funciona em qualquer dispositivo
+- ⚡ **Performance otimizada** com React hooks
+- 🎪 **Animações fluidas** e transições suaves
+- 🎯 **Lógica inteligente** para detecção de vitórias e empates
 
-### `npm start`
+## 🚀 Como Executar
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pré-requisitos
+- Node.js 16+ instalado
+- npm ou yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Instalação
 
-### `npm test`
+1. Clone o repositório:
+```bash
+git clone https://github.com/davydfontourac/projeto_jogo_da_velha.git
+cd projeto_jogo_da_velha
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Instale as dependências:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Execute em modo de desenvolvimento:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O jogo será aberto automaticamente em [http://localhost:3000](http://localhost:3000).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tecnologias Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React 19.1.1** - Biblioteca para interfaces de usuário
+- **Tailwind CSS 3.3.0** - Framework CSS utilitário
+- **Web Audio API** - Para efeitos sonoros
+- **Create React App** - Configuração e build
+- **PostCSS & Autoprefixer** - Processamento de CSS
 
-### `npm run eject`
+## 🎯 Como Jogar
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. O jogo é para dois jogadores: X e O
+2. Clique em qualquer casa vazia do tabuleiro
+3. Os jogadores se alternam automaticamente
+4. Vença alinhando 3 símbolos (horizontal, vertical ou diagonal)
+5. Use o botão "Reiniciar" para começar uma nova partida
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📱 Funcionalidades
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Detecção automática de vitória** em todas as direções
+- **Indicador visual do jogador atual**
+- **Placar persistente** durante a sessão
+- **Animações de hover** nos botões
+- **Efeitos sonoros** configuráveis
+- **Reset rápido** do jogo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔧 Scripts Disponíveis
 
-## Learn More
+- `npm start` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera build de produção
+- `npm test` - Executa os testes
+- `npm run eject` - Remove dependências do CRA (não recomendado)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Personalização
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+O projeto usa Tailwind CSS, permitindo fácil customização:
+- Cores e temas em `tailwind.config.js`
+- Estilos personalizados em `src/App.css`
+- Efeitos sonoros em `src/useSoundEffects.js`
 
-### Code Splitting
+## 📄 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
-### Analyzing the Bundle Size
+## 🤝 Contribuições
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contribuições são bem-vindas! Sinta-se à vontade para:
+- Reportar bugs
+- Sugerir novas funcionalidades  
+- Enviar pull requests
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desenvolvido com ❤️ usando React e Tailwind CSS
