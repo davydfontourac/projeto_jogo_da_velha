@@ -169,7 +169,7 @@ function App() {
 
   const makeMove = (index, player = currentPlayer) => {
     if (gameActive && board[index] === '') {
-      // Play move sound
+
       if (soundEnabled) {
         try {
           playMoveSound();
@@ -214,7 +214,7 @@ function App() {
         setCurrentPlayer(nextPlayer);
         
         if (gameMode === 'computer') {
-          // Check if the next player type is computer
+
           const nextPlayerType = whoStartsNext === 'computer' 
             ? (nextPlayer === 'X' ? 'computer' : 'player')
             : (nextPlayer === 'X' ? 'player' : 'computer');
@@ -248,7 +248,7 @@ function App() {
   };
 
   const restartGame = () => {
-    // Alterna quem começa a cada nova partida
+
     let nextStarter;
     if (gameMode === 'human') {
       nextStarter = whoStartsNext === 'player1' ? 'player2' : 'player1';
@@ -257,14 +257,14 @@ function App() {
     }
     
     setWhoStartsNext(nextStarter);
-    setCurrentPlayer('X'); // Quem começar sempre usa X
+    setCurrentPlayer('X'); 
     setBoard(Array(9).fill(''));
     setGameActive(true);
     setResult('');
     setWinningCells([]);
     setIsComputerTurn(false);
     
-    // Se no modo computador e o computador vai começar, ativa a flag
+
     if (gameMode === 'computer' && nextStarter === 'computer') {
       setIsComputerTurn(true);
     }
@@ -274,7 +274,7 @@ function App() {
     setScoreX(0);
     setScoreO(0);
     setGameHistory([]);
-    setWhoStartsNext('player1'); // Reinicia sempre com jogador 1 começando
+    setWhoStartsNext('player1'); 
     setCurrentPlayer('X');
     setBoard(Array(9).fill(''));
     setGameActive(true);
@@ -306,9 +306,9 @@ function App() {
   }, [isComputerTurn, gameActive, currentPlayer, gameMode, board, whoStartsNext]);
 
   const handleHumanMove = (index) => {
-    // Only allow human moves if it's not computer's turn
+
     if (gameMode === 'computer' && getCurrentPlayerType() === 'computer') {
-      return; // It's computer's turn, ignore human click
+      return; 
     }
     makeMove(index);
   };
@@ -330,8 +330,8 @@ function App() {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 
-                    flex items-center justify-center p-2 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 
+                    flex items-start sm:items-center justify-center p-1 sm:p-2 relative overflow-hidden">
       
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -340,7 +340,7 @@ function App() {
         <div className="absolute top-1/2 left-3/4 w-36 h-36 bg-blue-300 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-sm mx-auto">
+      <div className="relative z-10 w-full max-w-sm mx-auto py-1 sm:py-4">
         {/* Header */}
         <div className="text-center mb-4 relative">
           <button
