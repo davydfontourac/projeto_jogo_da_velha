@@ -1,13 +1,13 @@
 # 🎮 Jogo da Velha React
 
-Um jogo da velha moderno e interativo desenvolvido com React e Tailwind CSS, com efeitos sonoros e design responsivo.
+Um jogo da velha moderno e interativo desenvolvido com React e Vite, com Tailwind CSS para estilização, efeitos sonoros e design responsivo.
 
 ## ✨ Características
 
 - 🎨 **Interface moderna** com design glassmorphism
 - 🔊 **Efeitos sonoros** para jogadas e vitórias
 - 📱 **Design responsivo** que funciona em qualquer dispositivo
-- ⚡ **Performance otimizada** com React hooks
+- ⚡ **Performance otimizada** com React hooks e Vite
 - 🎪 **Animações fluidas** e transições suaves
 - 🎯 **Lógica inteligente** para detecção de vitórias e empates
 
@@ -32,17 +32,17 @@ npm install
 
 3. Execute em modo de desenvolvimento:
 ```bash
-npm start
+npm run dev
 ```
 
-O jogo será aberto automaticamente em [http://localhost:3000](http://localhost:3000).
+O jogo será aberto automaticamente em [http://localhost:5173](http://localhost:5173).
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **React 19.1.1** - Biblioteca para interfaces de usuário
+- **Vite 7.1.7** - Build tool ultrarrápido e servidor de desenvolvimento
 - **Tailwind CSS 3.3.0** - Framework CSS utilitário
 - **Web Audio API** - Para efeitos sonoros
-- **Create React App** - Configuração e build
 - **PostCSS & Autoprefixer** - Processamento de CSS
 
 ## 🎯 Como Jogar
@@ -64,10 +64,10 @@ O jogo será aberto automaticamente em [http://localhost:3000](http://localhost:
 
 ## 🔧 Scripts Disponíveis
 
-- `npm start` - Inicia o servidor de desenvolvimento
+- `npm run dev` - Inicia o servidor de desenvolvimento Vite
 - `npm run build` - Gera build de produção
-- `npm test` - Executa os testes
-- `npm run eject` - Remove dependências do CRA (não recomendado)
+- `npm run preview` - Preview do build de produção
+- `npm run lint` - Executa o linter ESLint
 
 ## 🎨 Personalização
 
@@ -75,6 +75,13 @@ O projeto usa Tailwind CSS, permitindo fácil customização:
 - Cores e temas em `tailwind.config.js`
 - Estilos personalizados em `src/App.css`
 - Efeitos sonoros em `src/useSoundEffects.js`
+
+## ⚡ Vantagens do Vite
+
+- **Início instantâneo** (~500ms vs ~10-15s do CRA)
+- **Hot Module Replacement** ultrarrápido
+- **Build otimizado** com melhor tree-shaking
+- **Menor consumo de recursos**
 
 ## 📄 Licença
 
@@ -89,4 +96,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 
 ---
 
-Desenvolvido com ❤️ usando React e Tailwind CSS
+Desenvolvido com ❤️ usando React, Vite e Tailwind CSS
